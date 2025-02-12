@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Dispositivos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-ZLOhjDnOjp7gXI7z1KT8f0DClhO0tO0"></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Monitoramento de Dispositivos</h1>
+    </header>
+
+    <div class="container">
+        <!-- Seção de Informações -->
+        <div class="info-container">
+            <h2>Última Posição</h2>
+
+            <!-- Barra de pesquisa dentro da info-container -->
+            <div class="search-box">
+                <input type="text" id="search-id" placeholder="Digite o ID do dispositivo">
+                <button class="clear-btn" onclick="clearMonitorID()">✖</button>
+                <button class="search-btn" onclick="setMonitorID()">Monitorar</button>
+            </div>
+
+            <div class="info-box">
+                <p><strong>ID:</strong> <span id="id_disp">-</span></p>
+                <p><strong>Latitude:</strong> <span id="latitude">-</span></p>
+                <p><strong>Longitude:</strong> <span id="longitude">-</span></p>
+                <p><strong>Endereço:</strong> <span id="endereco">Buscando...</span></p>
+                <p><strong>Velocidade:</strong> <span id="velocidade">-</span> km/h</p>
+                <p><strong>Data/Hora:</strong> <span id="data_hora">-</span></p>
+                <p><strong>Ignição:</strong> <span id="ignicao" class="ignicao-status"></span></p>
+                <p><strong>Bateria Externa:</strong> <span id="bateria_externa">-</span></p>
+                <p><strong>Nível Bateria Backup:</strong> <span id="bateria_backup">-</span></p>
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div id="map"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
